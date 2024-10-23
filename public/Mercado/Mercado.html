@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Marketplace</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/tv.js"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+        <span>FinanceHub</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Markets</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Invest</a></li>
+        </ul>
+      </nav>
+      <div class="search-login">
+        <input type="text" placeholder="Search" />
+        <button>Login</button>
+      </div>
+    </header>
+    <main>
+      <div class="categories">
+        <ul>
+          <li><a href="#">All</a></li>
+          <li><a href="#">Stocks</a></li>
+          <li><a href="#">Bonds</a></li>
+          <li><a href="#">Mutual Funds</a></li>
+          <li><a href="#">ETFs</a></li>
+          <li><a href="#">Cryptocurrencies</a></li>
+          <li><a href="#">Commodities</a></li>
+        </ul>
+      </div>
+
+      <!-- Primeiro Glide -->
+      <div class="swiper">
+        <div class="swiper-wrapper" id="first-glide-slides">
+          </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Best Offers Section -->
+      <div class="best-offers">
+        <h2>Geral do Mercado</h2>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script
+            type="text/javascript"
+            src="./components/TradingView.js"
+            async
+          ></script>
+        </div>
+      </div>
+
+
+      <!-- Trending Financial Markets Section -->
+      <div id="trending-financial-markets">
+        <h2>Tendências no Mercado Financeiro</h2>
+        <div id="market-categories">
+          <div class="category">
+            <h3>Stocks</h3>
+            <div class="glide" id="stocks-items-glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides" id="stocks-items"></ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="category">
+            <h3>Bonds</h3>
+            <div class="glide" id="bonds-items-glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides" id="bonds-items"></ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="category">
+            <h3>MutualFunds</h3>
+            <div class="glide" id="mutualfunds-items-glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides" id="mutualfunds-items"></ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="category">
+            <h3>ETFs</h3>
+            <div class="glide" id="etfs-items-glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides" id="etfs-items"></ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="category">
+            <h3>Cryptocurrencies</h3>
+            <div class="glide" id="cryptocurrencies-items-glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides" id="cryptocurrencies-items"></ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="category">
+            <h3>Commodities</h3>
+            <div class="glide" id="commodities-items-glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides" id="commodities-items"></ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About Us</h3>
+          <p>
+            FinanceHub is your one-stop destination for all your financial
+            market needs. We provide the latest news, insights, and tools to
+            help you invest wisely.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Markets</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Invest</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p>Email: contact@financehub.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Address: 123 Finance Street, New York, NY 10001</p>
+        </div>
+        <div class="footer-section social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><img src="icons/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="icons/twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="icons/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="icons/linkedin.png" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 FinanceHub | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script src="../../components/highlightedGlide.js"></script>
+    <script src="../../components/marketGlides.js"></script>
+    <script src="../../components/widgetUtils.js"></script>
+  </body>
+</html>

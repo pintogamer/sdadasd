@@ -1,0 +1,509 @@
+/* Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center
+    center/cover;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.icon {
+    width: 50px; /* Ajuste conforme necessário */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+/* Missão e Visão */
+.missao-visao {
+  background: #f9f9f9;
+}
+
+.missao-visao h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  flex: 0 0 45%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.flex-item img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+/* História */
+.historia {
+  background: #fff;
+}
+
+.historia h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #007bff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 6px;
+  width: 50%;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: white;
+  border: 4px solid #007bff;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.right::after {
+  left: -13px;
+}
+
+/* Valores */
+.valores {
+  background: #f9f9f9;
+}
+
+.valores h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.valores-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.valor-item {
+  flex: 0 0 22%;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.valor-item:hover {
+  transform: translateY(-10px);
+}
+
+.valor-item img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+/* O Que Fazemos */
+.servicos {
+  background: #fff;
+}
+
+.servicos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.servicos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.servico-item {
+  flex: 0 0 30%;
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.servico-item:hover {
+  transform: translateY(-10px);
+}
+
+.servico-item img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+/* Equipe */
+.equipe {
+  background: #f9f9f9;
+}
+
+.equipe h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.equipe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.equipe-item {
+  flex: 0 0 22%;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos do Formulário de Contato */
+form {
+  margin-top: 20px;
+  background-color: #fff; /* Cor de fundo para destacar o formulário */
+  padding: 30px; /* Adicionar espaçamento interno */
+  border-radius: 10px; /* Arredondar os cantos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333; /* Usar cor de texto principal */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9; /* Cor de fundo leve */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007BFF; /* Foco na cor azul do botão */
+}
+
+textarea {
+  resize: none; /* Desativar o redimensionamento */
+}
+
+button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo responsivo para formulário */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* Adicione ao seu CSS */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background: #3498db;
+}
+
+.equipe-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Parceiros */
+.parceiros {
+  background: #fff;
+}
+
+.parceiros h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.parceiros-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.parceiro-item {
+  flex: 0 0 150px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.parceiro-item:hover {
+  transform: scale(1.1);
+}
+
+/* Depoimentos */
+.depoimentos {
+  background: #f9f9f9;
+}
+
+.depoimentos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-slide {
+    display: flex;
+    transition: transform 1s ease;
+    width: 300%; /* Supondo 3 depoimentos */
+  }
+
+  .depoimento {
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+  }
+
+.depoimento img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Call to Action */
+.cta {
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+.cta .btn {
+  background: #fff;
+  color: #007bff;
+  border: none;
+}
+
+.cta .btn:hover {
+  background: #e6e6e6;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .flex-item,
+  .valor-item,
+  .servico-item,
+  .equipe-item,
+  .parceiro-item {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-item,
+  .valor-item,
+  .servico-item,
+  .equipe-item,
+  .parceiro-item {
+    flex: 0 0 100%;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 15px;
+  }
+}
