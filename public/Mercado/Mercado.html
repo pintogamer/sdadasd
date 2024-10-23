@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Financial Marketplace</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <link
       rel="stylesheet"
       href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
@@ -66,152 +66,14 @@
           <div class="tradingview-widget-container__widget"></div>
           <script
             type="text/javascript"
-            src="./components/TradingView.js"
+            src="../components/TradingView.js"
             async
           ></script>
         </div>
       </div>
 
 
-      <!-- Trending Financial Markets Section -->
-      <div id="trending-financial-markets">
-        <h2>Tendências no Mercado Financeiro</h2>
-        <div id="market-categories">
-          <div class="category">
-            <h3>Stocks</h3>
-            <div class="glide" id="stocks-items-glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides" id="stocks-items"></ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button
-                  class="glide__arrow glide__arrow--left"
-                  data-glide-dir="<"
-                >
-                  <
-                </button>
-                <button
-                  class="glide__arrow glide__arrow--right"
-                  data-glide-dir=">"
-                >
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="category">
-            <h3>Bonds</h3>
-            <div class="glide" id="bonds-items-glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides" id="bonds-items"></ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button
-                  class="glide__arrow glide__arrow--left"
-                  data-glide-dir="<"
-                >
-                  <
-                </button>
-                <button
-                  class="glide__arrow glide__arrow--right"
-                  data-glide-dir=">"
-                >
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="category">
-            <h3>MutualFunds</h3>
-            <div class="glide" id="mutualfunds-items-glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides" id="mutualfunds-items"></ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button
-                  class="glide__arrow glide__arrow--left"
-                  data-glide-dir="<"
-                >
-                  <
-                </button>
-                <button
-                  class="glide__arrow glide__arrow--right"
-                  data-glide-dir=">"
-                >
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="category">
-            <h3>ETFs</h3>
-            <div class="glide" id="etfs-items-glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides" id="etfs-items"></ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button
-                  class="glide__arrow glide__arrow--left"
-                  data-glide-dir="<"
-                >
-                  <
-                </button>
-                <button
-                  class="glide__arrow glide__arrow--right"
-                  data-glide-dir=">"
-                >
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="category">
-            <h3>Cryptocurrencies</h3>
-            <div class="glide" id="cryptocurrencies-items-glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides" id="cryptocurrencies-items"></ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button
-                  class="glide__arrow glide__arrow--left"
-                  data-glide-dir="<"
-                >
-                  <
-                </button>
-                <button
-                  class="glide__arrow glide__arrow--right"
-                  data-glide-dir=">"
-                >
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="category">
-            <h3>Commodities</h3>
-            <div class="glide" id="commodities-items-glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides" id="commodities-items"></ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button
-                  class="glide__arrow glide__arrow--left"
-                  data-glide-dir="<"
-                >
-                  <
-                </button>
-                <button
-                  class="glide__arrow glide__arrow--right"
-                  data-glide-dir=">"
-                >
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    
 
     <!-- Footer -->
     <footer>
@@ -256,8 +118,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
-    <script src="../../components/highlightedGlide.js"></script>
-    <script src="../../components/marketGlides.js"></script>
-    <script src="../../components/widgetUtils.js"></script>
+    <script src="../components/highlightedGlide.js"></script>
+    <script src="../components/marketGlides.js"></script>
+    <script src="../components/widgetUtils.js"></script>
   </body>
 </html>

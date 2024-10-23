@@ -5,7 +5,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
-require('dotenv').config()
+require('dotenv').config();
 
 dotenv.config();
 connectDB();
